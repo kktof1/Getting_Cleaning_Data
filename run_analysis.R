@@ -67,3 +67,4 @@ group_by_data <- group_by(extracted_data_w_subject, subject, activity)
 tidy_data <- summarize_each(group_by_data, funs(mean))
 
 
+
