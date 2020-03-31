@@ -8,12 +8,36 @@ This README document is to describe
 2. the code book for the tidy data
   
   
-### 1. Script usage
+### 1. Script working steps
 
 To run this script two condition is needed  
 
 * **scrpt** : the script, named with **run_analysis.R** should be in working directory  
 * **raw data** : the raw data directory, named with **UCI HAR Dataset** should b in working directory 
+  
+This is step how my script works
+
+0. Read raw data files
+- Read all txt files to the same name data frames 
+1. Merges the training and the test sets to create 
+- Merge only x_train and x_test at this stage
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+- Extract 2nd column(feature name) from features (<- feature.txt)
+- Names the one data with the feature names
+- Extract columns whitch has "mean()" or "std()" on its name
+3. Uses descriptive activity names to name the activities in the data set
+- Extract 2nd column(activity name) from activity_labelss (<- activity_labels.txt)
+- Merge activity label of traning & test data
+- For all the activity, convert its index number to the charactor vector
+- Mege the activity to the extracted data
+4. Appropriately labels the data set with descriptive variable names.
+- Name first column as activity
+- Exchange characters of "-" as ".", "()" as "" on the data names
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+- Merge subject of traning & test data
+- Mege the subject to the extracted data with activity
+- Name first column as subject
+- Create tidy data
   
   
 ### 2. Code book
