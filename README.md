@@ -17,27 +17,27 @@ To run this script two condition is needed
   
 This is step how my script works
 
-0. Read raw data files
-- Read all txt files to the same name data frames 
-1. Merges the training and the test sets to create 
-- Merge only x_train and x_test at this stage
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-- Extract 2nd column(feature name) from features (<- feature.txt)
-- Names the one data with the feature names
-- Extract columns whitch has "mean()" or "std()" on its name
-3. Uses descriptive activity names to name the activities in the data set
-- Extract 2nd column(activity name) from activity_labelss (<- activity_labels.txt)
-- Merge activity label of traning & test data
-- For all the activity, convert its index number to the charactor vector
-- Mege the activity to the extracted data
-4. Appropriately labels the data set with descriptive variable names.
-- Name first column as activity
-- Exchange characters of "-" as ".", "()" as "" on the data names
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-- Merge subject of traning & test data
-- Mege the subject to the extracted data with activity
-- Name first column as subject
-- Create tidy data
+0. Read raw data files  
+0.1. Read all txt files to the same name data frames   
+1. Merges the training and the test sets to create  
+1.1. Merge only x_train and x_test at this stage  
+2. Extracts only the measurements on the mean and standard deviation for each measurement.  
+2.1. Extract 2nd column(feature name) from features (<- feature.txt)  
+2.2. Names the one data with the feature names  
+2.3. Extract columns whitch has "mean()" or "std()" on its name  
+3. Uses descriptive activity names to name the activities in the data set  
+3.1. Extract 2nd column(activity name) from activity_labelss (<- activity_labels.txt)  
+3.2. Merge activity label of traning & test data  
+3.3. For all the activity, convert its index number to the charactor vector  
+3.4. Mege the activity to the extracted data  
+4. Appropriately labels the data set with descriptive variable names  
+4.1. Name first column as activity  
+4.2. Exchange characters of "-" as ".", "()" as "" on the data names  
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject  
+5.1. Merge subject of traning & test data  
+5.2. Mege the subject to the extracted data with activity  
+5.3. Name first column as subject  
+5.4. Create tidy data  
   
   
 ### 2. Code book
